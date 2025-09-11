@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  background-color: #282c34;
+  color: white;
+  margin: 0; 
+  padding: 20px; 
+}
+
+h1 {
+  margin-bottom: 20px; 
+  color: #ff6f61; 
+}
+
+#game-container {
+  display: grid;
+  grid-template-columns: repeat(10, 50px); 
+  grid-gap: 5px; 
+  background-color: #444; 
+  padding: 10px; 
+  border-radius: 10px; 
+}
+
+.cell {
+  width: 50px; 
+  height: 50px; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; 
+  background-color: #61dafb; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: transform 0.2s, background-color 0.2s; 
+  color: transparent; 
+}
+
+.cell:hover {
+  transform: scale(1.1); 
+}
+
+.cell.revealed {
+  background-color: #b2f7ef; 
+  color: black; 
+}
+
+.cell.bomb.revealed {
+  background-color: #ff6f61; 
+  color: white; 
+}
